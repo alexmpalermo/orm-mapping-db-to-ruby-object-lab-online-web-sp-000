@@ -44,8 +44,10 @@ def self.first_student_in_grade_10
       end.slice(0)
 end 
 
-def self.all_students_in_grade_X(grade)
-  
+def self.all_students_in_grade_X(x)
+  self.all.select do |instance|
+      instance.grade == "#{x}"
+    end
 end 
 
   def self.find_by_name(name)
