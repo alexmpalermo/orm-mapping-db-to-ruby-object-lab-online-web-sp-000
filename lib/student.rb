@@ -21,7 +21,7 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    "SELECT * FROM students
+    "SELECT students.name FROM students
     WHERE grade == 9 
     ;"
   end
