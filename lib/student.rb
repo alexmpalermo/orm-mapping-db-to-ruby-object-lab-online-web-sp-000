@@ -39,7 +39,9 @@ def self.first_X_students_in_grade_10(x)
 end 
 
 def self.first_student_in_grade_10
-  
+  self.all.select do |instance|
+      instance.grade == "10"
+      end.slice(0)
 end 
 
 def self.all_students_in_grade_X(grade)
