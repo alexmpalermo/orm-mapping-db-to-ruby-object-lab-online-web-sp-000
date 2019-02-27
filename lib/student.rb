@@ -21,9 +21,9 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    "SELECT students.name FROM students
-    WHERE students.grade == 9 
-    ;"
+     self.all.select do |instance|
+      instance.grade == "9"
+    end
   end
 
 def self.students_below_12th_grade
