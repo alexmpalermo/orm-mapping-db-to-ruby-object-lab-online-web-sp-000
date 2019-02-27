@@ -27,7 +27,9 @@ class Student
   end
 
 def self.students_below_12th_grade
-  
+   self.all.select do |instance|
+      instance.grade < "12"
+    end
 end 
 
 def self.first_X_students_in_grade_10(x)
